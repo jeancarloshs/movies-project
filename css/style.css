@@ -54,6 +54,11 @@ a:hover {
   padding: 10px;
 }
 
+svg:hover path{
+  fill: var(--green-primary);
+  stroke: var(--green-primary);
+}
+
 .destaque-slider {
   display: flex;
   align-items: center;
