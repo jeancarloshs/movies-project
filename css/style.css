@@ -59,12 +59,24 @@ svg:hover path{
   stroke: var(--green-primary);
 }
 
+.container-destaque {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+}
+
 .destaque-slider {
   display: flex;
   align-items: center;
   align-self: center;
   justify-content: center;
   margin-top: 20px;
+}
+
+.destaque-slider > img {
+  width: 100%;
 }
 
 .destaque-slider > img:nth-child(odd) {
