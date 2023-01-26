@@ -29,7 +29,7 @@ a:hover {
   color: var(--green-primary);
 }
 
-.ul-menu {
+.header-menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,14 +39,14 @@ a:hover {
   box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
 }
 
-.ul-menu > li {
+.links-menu {
   font-size: 15px;
   font-weight: 400;
   list-style: none;
   margin: 10px 25px;
 }
 
-.ul-menu > li > a {
+.links-menu > a {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,7 +60,6 @@ svg:hover path{
 }
 
 .container-destaque {
-  max-width: 100%;
   display: flex;
   align-items: center;
   align-self: center;
@@ -75,14 +74,23 @@ svg:hover path{
   margin-top: 20px;
 }
 
-.destaque-slider > img {
-  width: 100%;
+.img-destaque:hover {
+  cursor: pointer;
+}
+
+.img-destaque {
+  max-width: 100%;
+  width: 1000px;
 }
 
 .destaque-slider > img:nth-child(odd) {
+  max-width: 50%;
   margin: 0 20px 0 20px;
   width: 320px;
-  height: 475px;
+}
+
+.menu-teste:hover {
+  color: var(--green-primary);
 }
 
 .detalhes-destaque {
@@ -90,6 +98,12 @@ svg:hover path{
   top: 420px;
   margin-left: 50px;
   color: var(--white-primary);
+}
+
+.detalhes-destaque::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .detalhes-destaque > h1 {
@@ -114,4 +128,35 @@ svg:hover path{
   display: flex;
   align-items: center;
   align-self: center;
+}
+
+.btnInfo {
+  width: 125px;
+  height: 35px;
+  border: 1px solid var(--green-primary);
+  background-color: rgba(255, 255, 255, 0);
+  color: var(--green-primary);
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+.btnInfo:hover,
+.btnFavoritos:hover {
+  background-color: rgba(255, 255, 255, 0.250);
+}
+
+.btnFavoritos {
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--green-primary);
+  background-color: rgba(255, 255, 255, 0);
+  color: var(--green-primary);
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 50%;
 }
