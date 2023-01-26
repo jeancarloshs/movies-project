@@ -72,6 +72,7 @@ svg:hover path{
   align-self: center;
   justify-content: center;
   margin-top: 20px;
+  max-width: 1400px;
 }
 
 .img-destaque:hover {
@@ -79,14 +80,16 @@ svg:hover path{
 }
 
 .img-destaque {
-  max-width: 100%;
-  width: 1000px;
+  max-width: 1080px;
+  width: 100%;
+  height: auto;
 }
 
-.destaque-slider > img:nth-child(odd) {
-  max-width: 50%;
+.destaque-slider > .img-destaque:nth-child(odd) {
+  max-width: 1080px;
+  width: 240px;
+  height: auto;
   margin: 0 20px 0 20px;
-  width: 320px;
 }
 
 .menu-teste:hover {
@@ -95,15 +98,13 @@ svg:hover path{
 
 .detalhes-destaque {
   position: absolute;
-  top: 420px;
+  top: 340px;
   margin-left: 50px;
   color: var(--white-primary);
 }
 
-.detalhes-destaque::after {
-  content: "";
-  display: block;
-  clear: both;
+.detalhes-destaque {
+  clear: both !important;
 }
 
 .detalhes-destaque > h1 {
