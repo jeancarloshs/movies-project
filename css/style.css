@@ -210,6 +210,11 @@ svg:hover path{
 /* RESPONSIVO */
 @media (max-width: 600px)
 {
+  .destaque-slider {
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+
   .img-destaque {
     width: 340px;
     height: auto;
