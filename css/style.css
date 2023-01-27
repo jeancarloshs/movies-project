@@ -182,6 +182,7 @@ svg:hover path{
   font-size: 18px;
   width: 980px;
   height: 500px;
+  border-radius: 10px !important;
 }
 
 .swiper-slide img {
