@@ -18,6 +18,8 @@
 
 body {
   background-color: var(--blue-secundary);
+  position: relative;
+  height: 100%;
 }
 
 a {
@@ -26,7 +28,6 @@ a {
 }
 
 a:hover {
-  font-weight: 700;
   color: var(--green-primary);
 }
 
@@ -35,6 +36,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   align-self: center;
+  width: 100%;
   height: 70px;
   color: var(--white-primary);
   box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
@@ -85,22 +87,18 @@ svg:hover path{
   max-width: 1400px;
 }
 
-.img-destaque:hover {
-  cursor: pointer;
-}
-
-.img-destaque {
+/* .img-destaque {
   max-width: 1080px;
   width: 100%;
   height: auto;
-}
+} */
 
-.destaque-slider > .img-destaque:nth-child(odd) {
+/* .destaque-slider > .img-destaque:nth-child(odd) {
   max-width: 1080px;
   width: 240px;
   height: auto;
   margin: 0 20px 0 20px;
-}
+} */
 
 .menu-teste:hover {
   color: var(--green-primary);
@@ -173,7 +171,39 @@ svg:hover path{
 }
 
 
+.swiper {
+  width: 100%;
+  height: auto;
+}
 
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 18px;
+  width: 980px;
+  height: 500px;
+}
+
+.swiper-slide img {
+  max-width: 90%;
+  width: 100%;
+  height: auto;
+  object-fit: fill;
+}
+
+.swiper .swiper-slide {
+  width: 1000px;
+  height: 500px;
+  line-height: 300px;
+}
+
+.swiper .swiper-slide:nth-child(2n) {
+  height: 500px;
+  line-height: 500px;
+}
 
 
 

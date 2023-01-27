@@ -8,6 +8,10 @@
   <title>Movie's Project</title>
 
   <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
 </head>
 <body>
 
@@ -42,11 +46,11 @@
         </div>
   </header>
 
-  <section class="container-destaque">
-    <div class="destaque-slider">
-      <img class="img-destaque" src="./assets/images/destaque/marte.png" title="Perdido em marte" alt="Perdido em marte">
+  <!-- <section class="container-destaque swiper">
+    <div class="destaque-slider swiper-wrapper">
+      <img class="img-destaque swiper-slide" src="./assets/images/destaque/marte.png" title="Perdido em marte" alt="Perdido em marte">
       <div class="info-destaque">
-        <img class="img-destaque" src="./assets/images/destaque/avatar.png" title="Avatar" alt="Avatar">
+        <img class="img-destaque swiper-slide" src="./assets/images/destaque/avatar.png" title="Avatar" alt="Avatar">
         <div class="detalhes-destaque">
           <h1>Avatar</h1>
           <p>The Way of Water</p>
@@ -60,11 +64,42 @@
           </div>
         </div>
       </div>
-      <img class="img-destaque" src="./assets/images/destaque/interstelar.png" title="Interstelar" alt="Interstelar">
+      <img class="img-destaque swiper-slide" src="./assets/images/destaque/interstelar.png" title="Interstelar" alt="Interstelar">
     </div>
-  </section>
+  </section> -->
+
+  <!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">
+      <img class="img-destaque swiper-slide" src="https://i.pinimg.com/originals/c8/a2/6c/c8a26cd4f874bf8e1517962fd70f8b76.jpg" title="Perdido em marte" alt="Perdido em marte">
+    </div>
+
+    <div class="swiper-slide">
+      <img class="img-destaque swiper-slide" src="./assets/images/destaque/avatar.png" title="Avatar" alt="Avatar">
+    </div>
+
+    <div class="swiper-slide">
+      <img class="img-destaque swiper-slide" src="http://recantoadormecido.com.br/wp-content/uploads/2014/10/Interstellar-Official-Poster-Banner-PROMO-02OUTUBRO2014.jpg" title="Interstelar" alt="Interstelar">
+    </div>
+    
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
 
   <div class="separador"></div>
   
+  <script src="./js/slide.js"></script>
+
 </body>
 </html>
