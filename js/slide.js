@@ -7,7 +7,7 @@ const swiper = new Swiper('.swiper', {
   rewind: true,
   initialSlide: 1,
   slidesPerView: 1,
-  spaceBetween: -1000,
+  spaceBetween: -800,
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
