@@ -3,9 +3,11 @@ const swiper = new Swiper('.swiper', {
   effect: 'coverflow',
   grabCursor: true,
   centeredSlides: true,
-  loop: true,
+  loop: false,
+  rewind: true,
+  initialSlide: 1,
   slidesPerView: 1,
-  spaceBetween: -400,
+  spaceBetween: -1000,
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
