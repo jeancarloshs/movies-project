@@ -102,19 +102,24 @@ svg:hover path{
   margin: 0 20px 0 20px;
 } */
 
-/* .detalhes-destaque {
-  position: absolute;
-  top: 340px;
-  margin-left: 50px;
+.detalhes-destaque {
+  margin-left: -30%;
+  margin-top: 220px;
   color: var(--white-primary);
-} */
+  text-shadow: 2px 2px 5px rgb(158, 158, 158);
+  z-index: 999;
+}
 
 /* .detalhes-destaque {
   clear: both !important;
 } */
 
-/* .detalhes-destaque > h1 {
+.detalhes-destaque > h1 {
   font-size: 54px;
+  width: 450px;
+  overflow-wrap: break-word;  
+  word-wrap: break-word; 
+  word-break: break-word;
 }
 
 .detalhes-destaque > p {
@@ -166,7 +171,7 @@ svg:hover path{
   font-size: 14px;
   cursor: pointer;
   border-radius: 50%;
-} */
+} 
 
 
 .swiper {
