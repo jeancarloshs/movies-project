@@ -56,7 +56,7 @@ const swiper = new Swiper('.swiper', {
     }
 });
 
-let API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
+const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
 
 (async () => {
   let headersList = {
