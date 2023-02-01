@@ -83,8 +83,9 @@ svg:hover path{
 .swiper-slide > .detalhes-destaque {
   position: absolute;
   margin-left: -350px;
-  width: 450px;
-  height: 150px;
+  line-height: 1;
+  max-width: 450px;
+  height: 50px;
   color: var(--white-primary);
   text-shadow: 2px 2px 5px rgb(158, 158, 158);
 }
@@ -107,12 +108,27 @@ svg:hover path{
   align-self: center;
 }
 
-.swiper-slide > .detalhes-destaque > .info-detalhes > img {
+.infoImg:nth-child(even) {
+  width: 45px;
+  height: 30px;
+  left: 40px;
+}
+
+.swiper-slide > .detalhes-destaque > .info-detalhes > .infoImg {
   position: absolute;
+  top: 180px;
+}
+
+.swiper-slide > .detalhes-destaque > .info-detalhes > .spanInfo {
+  position: absolute;
+  top: 150px;
+  font-size: 18px;
   margin-right: 10px;
 }
 
-.swiper-slide > .detalhes-destaque > .info-detalhes > span {
+.spanInfo:nth-child(even) {
+  position: absolute;
+  left: 125px;
   font-size: 18px;
   margin-right: 10px;
 }
@@ -129,7 +145,7 @@ svg:hover path{
   cursor: pointer;
   border-radius: 10px;
   margin-right: 10px;
-  top: 200px;
+  top: 100px;
 }
 
 .swiper-slide > .detalhes-destaque > .btnFavoritos {
@@ -143,7 +159,7 @@ svg:hover path{
   font-size: 14px;
   cursor: pointer;
   border-radius: 50%;
-  top: 200px;
+  top: 100px;
   left: 135px;
 } 
 
@@ -171,9 +187,9 @@ svg:hover path{
   border-radius: 10px !important;
 }
 
-.swiper-slide img {
+.swiper-slide .img-destaque {
   max-width: 90%;
-  width: 100%;
+  /* width: 100%; */
   height: 90% !important;
   object-fit: fill;
 }

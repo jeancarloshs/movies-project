@@ -106,10 +106,10 @@ let API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
             <button class="btnInfo">Assistir</button>
             <button class="btnFavoritos">+</button>
             <div class="info-detalhes">
-              <img src="./assets/images/destaque/12 1.png" alt="Indicação 12 Anos">
-              <img src="./assets/images/destaque/4K 1.png" alt="Resolução 4K">
-              <span>${tempoDeConteudo} min</span>
-              <span>${anoLancamento}</span>
+              <img class="infoImg" src="./assets/images/destaque/12 1.png" alt="Indicação 12 Anos">
+              <img class="infoImg" src="./assets/images/destaque/4K 1.png" alt="Resolução 4K">
+              <span class="spanInfo">${tempoDeConteudo} min</span>
+              <span class="spanInfo">${anoLancamento}</span>
             </div>
           </div>
           </div>`
@@ -123,10 +123,10 @@ let API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
           <button class="btnInfo">Assistir</button>
           <button class="btnFavoritos">+</button>
             <div class="info-detalhes">
-              <img src="./assets/images/destaque/12 1.png" alt="Indicação 12 Anos">
-              <img src="./assets/images/destaque/4K 1.png" alt="Resolução 4K">
-              <span>${tempoDeConteudo} min</span>
-              <span>${anoLancamento}</span>
+              <img class="infoImg" src="./assets/images/destaque/12 1.png" alt="Indicação 12 Anos">
+              <img class="infoImg" src="./assets/images/destaque/4K 1.png" alt="Resolução 4K">
+              <span class="spanInfo">${tempoDeConteudo} min</span>
+              <span class="spanInfo">${anoLancamento}</span>
             </div>
           </div>
           </div>`
@@ -140,10 +140,10 @@ let API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
             <button class="btnInfo">Assistir</button>
             <button class="btnFavoritos">+</button>
             <div class="info-detalhes">
-              <img src="./assets/images/destaque/12 1.png" alt="Indicação 12 Anos">
-              <img src="./assets/images/destaque/4K 1.png" alt="Resolução 4K">
-              <span>3:12 min</span>
-              <span>${anoLancamento}</span>
+              <img class="infoImg" src="./assets/images/destaque/12 1.png" alt="Indicação 12 Anos">
+              <img class="infoImg" src="./assets/images/destaque/4K 1.png" alt="Resolução 4K">
+              <span class="spanInfo">${tempoDeConteudo} min</span>
+              <span class="spanInfo">${anoLancamento}</span>
             </div>
           </div>
           </div>`
