@@ -130,7 +130,7 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
             </div>
           </div>
           </div>`
-        } if (idFilme == 361743) {
+        } if (idFilme == 663712) {
           console.log('ID Filme Direita:', idFilme)
           slideHeader.innerHTML += `
           <div class="swiper-slide">
@@ -149,5 +149,24 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
           </div>`
         }
       });
+})
+();
+
+
+
+(async () => {
+  let headersList = {
+    "Accept": "*/*",
+    "User-Agent": "Thunder Client (https://www.thunderclient.com)"
+   }
+   
+   let response = await fetch(`https://api.themoviedb.org/3/movie/${resIdFilme}?api_key=${API_KEY}&language=pt-BR`, { 
+     method: "GET",
+     headers: headersList,
+   });
+   
+   let data = await response.json();
+   let dataJson = data
+   console.log(dataJson.runtime)
 })
 ();
