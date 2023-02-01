@@ -80,69 +80,45 @@ svg:hover path{
   margin: 20px auto;
 }
 
-/* .destaque-slider {
-  display: flex;
-  align-items: center;
-  align-self: center;
-  justify-content: center;
-  margin-top: 20px;
-  max-width: 1400px;
-} */
-
-/* .img-destaque {
-  max-width: 1080px;
-  width: 100%;
-  height: auto;
-} */
-
-/* .destaque-slider > .img-destaque:nth-child(odd) {
-  max-width: 1080px;
-  width: 240px;
-  height: auto;
-  margin: 0 20px 0 20px;
-} */
-
-.detalhes-destaque {
-  margin-left: -30%;
-  margin-top: 220px;
+.swiper-slide > .detalhes-destaque {
+  position: absolute;
+  margin-left: -350px;
+  width: 450px;
+  height: 150px;
   color: var(--white-primary);
   text-shadow: 2px 2px 5px rgb(158, 158, 158);
-  z-index: 999;
 }
 
-/* .detalhes-destaque {
-  clear: both !important;
-} */
-
-.detalhes-destaque > h1 {
-  font-size: 54px;
-  width: 450px;
+.swiper-slide .detalhes-destaque > h1 {
+  font-size: 36px;
   overflow-wrap: break-word;  
   word-wrap: break-word; 
   word-break: break-word;
 }
 
-.detalhes-destaque > p {
+.swiper-slide .detalhes-destaque > p {
   font-size: 40px;
   font-weight: 300;
 }
 
-.info-detalhes > img {
-  margin-right: 10px;
-}
-
-.info-detalhes > span {
-  font-size: 18px;
-  margin-right: 10px;
-}
-
-.info-detalhes {
+.swiper-slide > .detalhes-destaque > .info-detalhes {
   display: flex;
   align-items: center;
   align-self: center;
 }
 
-.btnInfo {
+.swiper-slide > .detalhes-destaque > .info-detalhes > img {
+  position: absolute;
+  margin-right: 10px;
+}
+
+.swiper-slide > .detalhes-destaque > .info-detalhes > span {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.swiper-slide > .detalhes-destaque > .btnInfo {
+  position: absolute;
   width: 125px;
   height: 35px;
   border: 1px solid var(--green-primary);
@@ -152,16 +128,12 @@ svg:hover path{
   font-size: 14px;
   cursor: pointer;
   border-radius: 10px;
-  margin-bottom: 20px;
   margin-right: 10px;
+  top: 200px;
 }
 
-.btnInfo:hover,
-.btnFavoritos:hover {
-  background-color: rgba(255, 255, 255, 0.250);
-}
-
-.btnFavoritos {
+.swiper-slide > .detalhes-destaque > .btnFavoritos {
+  position: absolute;
   width: 35px;
   height: 35px;
   border: 1px solid var(--green-primary);
@@ -171,8 +143,16 @@ svg:hover path{
   font-size: 14px;
   cursor: pointer;
   border-radius: 50%;
+  top: 200px;
+  left: 135px;
 } 
 
+.btnInfo:hover,
+.btnFavoritos:hover {
+  background-color: rgba(255, 255, 255, 0.250) !important;
+}
+
+/* ---------- ESTILO SLIDE ---------- */
 
 .swiper {
   width: 100%;
@@ -206,7 +186,6 @@ svg:hover path{
 
 .swiper .swiper-slide:nth-child(2n) {
   height: 500px;
-  line-height: 500px;
 }
 
 .swiper-3d .swiper-slide-shadow-left,
@@ -256,7 +235,7 @@ svg:hover path{
 
 
 /* RESPONSIVO */
-@media (max-width: 600px)
+/* @media (max-width: 600px)
 {
   .destaque-slider {
     flex-wrap: wrap;
@@ -271,16 +250,16 @@ svg:hover path{
   .destaque-slider > .img-destaque:nth-child(odd) {
     width: 340px;
     height: 192px;
-  }
+  } */
 
-  .detalhes-destaque {
+  /* .detalhes-destaque {
     position: absolute;
     top: 240px;
     margin-left: 25px;
     color: var(--white-primary);
-  }
+  } */
 
-  .detalhes-destaque > h1 {
+  /* .detalhes-destaque > h1 {
     font-size: 24px;
   }
   
@@ -307,4 +286,4 @@ svg:hover path{
   .separador {
     margin-top: 120px;
   }
-}
+} */

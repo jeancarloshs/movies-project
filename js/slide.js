@@ -66,7 +66,7 @@ let API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
    
    let response = await fetch(`https://api.themoviedb.org/3/movie/now_playing/?api_key=${API_KEY}&language=pt-BR`, { 
      method: "GET",
-     headers: headersList
+     headers: headersList,
    });
    
    let data = await response.json();
@@ -101,58 +101,52 @@ let API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
           slideHeader.innerHTML = `
           <div class="swiper-slide">
             <img class="img-destaque swiper-slide" src="https://image.tmdb.org/t/p/original/${bannerImage}" title="${tituloPtBr}" alt="${tituloPtBr}">
+            <div class="detalhes-destaque">
+            <h1>${tituloPtBr}</h1>
+            <button class="btnInfo">Assistir</button>
+            <button class="btnFavoritos">+</button>
+            <div class="info-detalhes">
+              <img src="./assets/images/destaque/12 1.png" alt="Indicação 12 Anos">
+              <img src="./assets/images/destaque/4K 1.png" alt="Resolução 4K">
+              <span>${tempoDeConteudo} min</span>
+              <span>${anoLancamento}</span>
+            </div>
+          </div>
           </div>`
-        //   let infoSlide = document.querySelector('.swiper-wrapper')
-        //   infoSlide.innerHTML += `
-        //   <div class="detalhes-destaque">
-        //   <h1>${tituloPtBr}</h1>
-        //   <button class="btnInfo">Assistir</button>
-        //   <button class="btnFavoritos">+</button>
-        //   <div class="info-detalhes">
-        //     <img src="./assets/images/destaque/12 1.png" alt="Indicação 12 Anos">
-        //     <img src="./assets/images/destaque/4K 1.png" alt="Resolução 4K">
-        //     <span>${tempoDeConteudo} min</span>
-        //     <span>${anoLancamento}</span>
-        //   </div>
-        // </div>`
         } if (idFilme == 76600) {
           console.log('ID Filme Meio:', idFilme)
           slideHeader.innerHTML += `
           <div class="swiper-slide">
             <img class="img-destaque swiper-slide" src="https://image.tmdb.org/t/p/original/${bannerImage}" title="${tituloPtBr}" alt="${tituloPtBr}">
+          <div class="detalhes-destaque">
+          <h1>${tituloPtBr}</h1>
+          <button class="btnInfo">Assistir</button>
+          <button class="btnFavoritos">+</button>
+            <div class="info-detalhes">
+              <img src="./assets/images/destaque/12 1.png" alt="Indicação 12 Anos">
+              <img src="./assets/images/destaque/4K 1.png" alt="Resolução 4K">
+              <span>${tempoDeConteudo} min</span>
+              <span>${anoLancamento}</span>
+            </div>
+          </div>
           </div>`
-        //   let infoSlide = document.querySelector('.swiper-wrapper')
-        //   infoSlide.innerHTML += `
-        //   <div class="detalhes-destaque">
-        //   <h1>${tituloPtBr}</h1>
-        //   <button class="btnInfo">Assistir</button>
-        //   <button class="btnFavoritos">+</button>
-        //   <div class="info-detalhes">
-        //     <img src="./assets/images/destaque/12 1.png" alt="Indicação 12 Anos">
-        //     <img src="./assets/images/destaque/4K 1.png" alt="Resolução 4K">
-        //     <span>${tempoDeConteudo} min</span>
-        //     <span>${anoLancamento}</span>
-        //   </div>
-        // </div>`
         } if (idFilme == 361743) {
           console.log('ID Filme Direita:', idFilme)
           slideHeader.innerHTML += `
           <div class="swiper-slide">
             <img class="img-destaque swiper-slide" src="https://image.tmdb.org/t/p/original/${bannerImage}" title="${tituloPtBr}" alt="${tituloPtBr}">
+            <div class="detalhes-destaque">
+            <h1>${tituloPtBr}</h1>
+            <button class="btnInfo">Assistir</button>
+            <button class="btnFavoritos">+</button>
+            <div class="info-detalhes">
+              <img src="./assets/images/destaque/12 1.png" alt="Indicação 12 Anos">
+              <img src="./assets/images/destaque/4K 1.png" alt="Resolução 4K">
+              <span>3:12 min</span>
+              <span>${anoLancamento}</span>
+            </div>
+          </div>
           </div>`
-        //   let infoSlide = document.querySelector('.swiper-wrapper')
-        //   infoSlide.innerHTML += `
-        //   <div class="detalhes-destaque">
-        //   <h1>${tituloPtBr}</h1>
-        //   <button class="btnInfo">Assistir</button>
-        //   <button class="btnFavoritos">+</button>
-        //   <div class="info-detalhes">
-        //     <img src="./assets/images/destaque/12 1.png" alt="Indicação 12 Anos">
-        //     <img src="./assets/images/destaque/4K 1.png" alt="Resolução 4K">
-        //     <span>3:12 min</span>
-        //     <span>${anoLancamento}</span>
-        //   </div>
-        // </div>`
         }
       });
 })
