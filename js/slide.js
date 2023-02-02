@@ -76,7 +76,8 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
 
    let slideHeader = document.querySelector('.swiper-wrapper')
 
-      dataJson.forEach((element, index, array) => {
+   //.slice(-3) limita o forEach em somente 3 elementos
+      dataJson.slice(0, 3).forEach((element, index, array) => {
         let idFilme = element.id;
         let tituloPtBr = element.title;
         let sinopsePtBr = element.overview
@@ -84,7 +85,7 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
         let posterImage = element.poster_path;
         let dataDeLancamento = element.release_date;
         let tempoDeConteudo = element.runtime;
-        
+        console.log(tituloPtBr)
         // METODO PARA SELECIONAR SOMENTE OS 4 DIGITOS DO ANO, 2022
         let anoLancamento = dataDeLancamento.substring(0, 4)
         //console.log(anoLancamento)
@@ -92,46 +93,8 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
         //console.log(dataDeLancamento.substring(0, 4))
         //console.log(tituloPtBr)
 
-        // ID TOP GUN 361743
-        // ID AVATAR 76600
-        // ID GATO DE BOTAS 315162
-
-        if (idFilme == 315162) {
-          console.log('ID Filme Esquerda:', idFilme)
-          slideHeader.innerHTML = `
-          <div class="swiper-slide">
-            <img class="img-destaque swiper-slide" src="https://image.tmdb.org/t/p/original/${bannerImage}" title="${tituloPtBr}" alt="${tituloPtBr}">
-            <div class="detalhes-destaque">
-            <h1>${tituloPtBr}</h1>
-            <button class="btnInfo">Assistir</button>
-            <button class="btnFavoritos">+</button>
-            <div class="info-detalhes">
-              <img class="infoImg" src="./assets/images/destaque/12 1.png" alt="Indicação 12 Anos">
-              <img class="infoImg" src="./assets/images/destaque/4K 1.png" alt="Resolução 4K">
-              <span class="spanInfo">${tempoDeConteudo} min</span>
-              <span class="spanInfo">${anoLancamento}</span>
-            </div>
-          </div>
-          </div>`
-        } if (idFilme == 76600) {
-          console.log('ID Filme Meio:', idFilme)
-          slideHeader.innerHTML += `
-          <div class="swiper-slide">
-            <img class="img-destaque swiper-slide" src="https://image.tmdb.org/t/p/original/${bannerImage}" title="${tituloPtBr}" alt="${tituloPtBr}">
-          <div class="detalhes-destaque">
-          <h1>${tituloPtBr}</h1>
-          <button class="btnInfo">Assistir</button>
-          <button class="btnFavoritos">+</button>
-            <div class="info-detalhes">
-              <img class="infoImg" src="./assets/images/destaque/12 1.png" alt="Indicação 12 Anos">
-              <img class="infoImg" src="./assets/images/destaque/4K 1.png" alt="Resolução 4K">
-              <span class="spanInfo">${tempoDeConteudo} min</span>
-              <span class="spanInfo">${anoLancamento}</span>
-            </div>
-          </div>
-          </div>`
-        } if (idFilme == 663712) {
-          console.log('ID Filme Direita:', idFilme)
+        for (let i = 0; i < 3; i++) {
+          console.log(dataJson[i])
           slideHeader.innerHTML += `
           <div class="swiper-slide">
             <img class="img-destaque swiper-slide" src="https://image.tmdb.org/t/p/original/${bannerImage}" title="${tituloPtBr}" alt="${tituloPtBr}">
@@ -147,6 +110,7 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
             </div>
           </div>
           </div>`
+          break;
         }
       });
 })
