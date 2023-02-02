@@ -106,6 +106,17 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
                   method: "GET",
                   headers: headersList,
                 }).then(response => response.json()).then(dataTime => {
+                  // Converter minutos em horas
+                  let converter = (minutos) => {
+                    let horas = Math.floor(dataTime.runtime/ 60);          
+                    let min = dataTime.runtime % 60;
+                    let textoHoras = (`00${horas}`).slice(-2);
+                    let textoMinutos = (`00${min}`).slice(-2);
+                    
+                    return `${textoHoras }:${textoMinutos}`;
+                  };                  
+                  console.log(converter(70));
+
                   slideHeader.innerHTML += `
                   <div class="swiper-slide">
                     <img class="img-destaque swiper-slide" src="https://image.tmdb.org/t/p/original/${bannerImage}" title="${tituloPtBr}" alt="${tituloPtBr}">
@@ -117,7 +128,7 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
                         <img class="infoImg" src="./assets/images/destaque/12 1.png" alt="Indicação 12 Anos">
                         <img class="infoImg" src="./assets/images/destaque/4K 1.png" alt="Resolução 4K">
                         <span class="spanInfo">${anoLancamento}</span>
-                        <span class="spanInfo">/ ${dataTime.runtime} min</span>
+                        <span class="spanInfo">/ ${converter(70)} min</span>
                       </div>
                     </div>
                   </div>`
