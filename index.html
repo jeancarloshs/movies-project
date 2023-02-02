@@ -13,6 +13,16 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
+  <script>
+    // Função que verifica a tela terminar de carregar para exibir o conteudo
+    document.addEventListener("DOMContentLoaded", function(event) {      
+    setTimeout(function(){ 
+    console.log("Somente serei executado quando o navegador terminar de analisar todo o DOM");
+   },2000);
+      
+    });
+  </script>
+
 </head>
 <body>
 
