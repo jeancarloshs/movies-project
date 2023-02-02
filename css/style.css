@@ -129,7 +129,7 @@ svg:hover path{
 
 .spanInfo:nth-child(even) {
   position: absolute;
-  left: 125px;
+  left: 50px;
   font-size: 18px;
   margin-right: 10px;
 }

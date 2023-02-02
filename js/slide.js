@@ -93,44 +93,27 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
         //console.log(dataDeLancamento.substring(0, 4))
         //console.log(tituloPtBr)
 
-        for (let i = 0; i < 3; i++) {
-          console.log(dataJson[i])
-          slideHeader.innerHTML += `
-          <div class="swiper-slide">
-            <img class="img-destaque swiper-slide" src="https://image.tmdb.org/t/p/original/${bannerImage}" title="${tituloPtBr}" alt="${tituloPtBr}">
-            <div class="detalhes-destaque">
-            <h1>${tituloPtBr}</h1>
-            <button class="btnInfo">Assistir</button>
-            <button class="btnFavoritos">+</button>
-            <div class="info-detalhes">
-              <img class="infoImg" src="./assets/images/destaque/12 1.png" alt="Indicação 12 Anos">
-              <img class="infoImg" src="./assets/images/destaque/4K 1.png" alt="Resolução 4K">
-              <span class="spanInfo">${tempoDeConteudo} min</span>
-              <span class="spanInfo">${anoLancamento}</span>
+          fetch(`https://api.themoviedb.org/3/movie/${idFilme}?api_key=${API_KEY}&language=pt-BR`, { 
+            method: "GET",
+            headers: headersList,
+          }).then(response => response.json()).then(dataTime => {
+            slideHeader.innerHTML += `
+            <div class="swiper-slide">
+              <img class="img-destaque swiper-slide" src="https://image.tmdb.org/t/p/original/${bannerImage}" title="${tituloPtBr}" alt="${tituloPtBr}">
+              <div class="detalhes-destaque">
+              <h1>${tituloPtBr}</h1>
+              <button class="btnInfo">Assistir</button>
+              <button class="btnFavoritos">+</button>
+              <div class="info-detalhes">
+                <img class="infoImg" src="./assets/images/destaque/12 1.png" alt="Indicação 12 Anos">
+                <img class="infoImg" src="./assets/images/destaque/4K 1.png" alt="Resolução 4K">
+                <span class="spanInfo">${anoLancamento}</span>
+                <span class="spanInfo">/ ${dataTime.runtime} min</span>
+              </div>
             </div>
-          </div>
-          </div>`
-          break;
-        }
+            </div>`
+          })
+
       });
-})
-();
-
-
-
-(async () => {
-  let headersList = {
-    "Accept": "*/*",
-    "User-Agent": "Thunder Client (https://www.thunderclient.com)"
-   }
-   
-   let response = await fetch(`https://api.themoviedb.org/3/movie/${resIdFilme}?api_key=${API_KEY}&language=pt-BR`, { 
-     method: "GET",
-     headers: headersList,
-   });
-   
-   let data = await response.json();
-   let dataJson = data
-   console.log(dataJson.runtime)
 })
 ();
