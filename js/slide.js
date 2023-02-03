@@ -115,14 +115,14 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
                     
                     return `${textoHoras }:${textoMinutos}`;
                   };                  
-                  console.log(converter(60));
+                  // console.log(converter(60));
 
                   slideHeader.innerHTML += `
                   <div class="swiper-slide">
                     <img class="img-destaque swiper-slide" src="https://image.tmdb.org/t/p/original/${bannerImage}" title="${tituloPtBr}" alt="${tituloPtBr}">
                     <div class="detalhes-destaque">
                     <h1>${tituloPtBr}</h1>
-                    <button class="btnInfo"><a href="https://www.youtube.com/watch?v=${element.key}" target="_blank">Assistir</a></button>
+                    <button class="btnInfo" movie-id=${idFilme}><a href="https://www.youtube.com/watch?v=${element.key}" target="_blank">Assistir</a></button>
                     <button class="btnFavoritos">+</button>
                       <div class="info-detalhes">
                         <span class="spanInfo">${anoLancamento}</span>
@@ -131,7 +131,6 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
                     </div>
                   </div>`
                 })
-
               })
             })
       });
