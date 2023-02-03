@@ -33,6 +33,14 @@ a:hover {
   color: var(--green-primary);
 }
 
+#loading {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  margin-top: 15%;
+}
+
 .header-menu {
   display: flex;
   justify-content: center;
@@ -220,15 +228,6 @@ svg:hover path{
   opacity: 1 !important;
   transition: 0.5s !important;
 }
-
-
-
-
-
-
-
-
-
 
 
 
