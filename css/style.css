@@ -355,17 +355,7 @@ button:hover {
     margin: 20px 0;
     height: auto !important;
   }
-
-  .destaque-slider {
-    flex-wrap: wrap !important;
-    margin-bottom: 50px !important;
-  }
   
-  .destaque-slider > .img-destaque:nth-child(odd) {
-    width: 340px !important;
-    height: 192px !important;
-  }
-
   .detalhes-destaque {
     margin-top: 50px;
     margin-left: 70px !important;
@@ -416,10 +406,6 @@ button:hover {
     top: 80px !important;
     margin-right: 10px !important;
   }
-
-  /* .separador {
-    margin-top: 120px !important;
-  } */
 }
 
 @media only screen and (min-width: 601px) and  (max-width: 920px)
@@ -428,17 +414,7 @@ button:hover {
     margin: 20px 0;
     height: auto !important;
   }
-
-  .destaque-slider {
-    flex-wrap: wrap !important;
-    margin-bottom: 50px !important;
-  }
   
-  .destaque-slider > .img-destaque:nth-child(odd) {
-    width: 340px !important;
-    height: 192px !important;
-  }
-
   .detalhes-destaque {
     margin-top: 50px;
     margin-left: 70px !important;
@@ -488,8 +464,4 @@ button:hover {
     top: 80px !important;
     margin-right: 10px !important;
   }
-
-  /* .separador {
-    margin-top: 120px !important;
-  } */
 }

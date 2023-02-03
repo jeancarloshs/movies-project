@@ -48,6 +48,7 @@ const swiper = new Swiper('.swiper', {
       // when window width is >= 480px
       480: {
         slidesPerView: 1,
+        spaceBetween: -100,
       },
       // when window width is >= 640px
       640: {
