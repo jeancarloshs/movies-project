@@ -349,7 +349,7 @@ button:hover {
 
 
 /* RESPONSIVO */
-@media (max-width: 600px)
+@media only screen and  (max-width: 600px)
 {
   .swiper .swiper-slide {
     margin: 20px 0;
@@ -367,14 +367,13 @@ button:hover {
   }
 
   .detalhes-destaque {
-    position: absolute !important;
-    top: 200px !important;
-    margin-left: 25px !important;
+    margin-top: 50px;
+    margin-left: 70px !important;
     color: var(--white-primary) !important;
   }
 
   .detalhes-destaque > h1 {
-    font-size: 24px !important;
+    font-size: 18px !important;
     margin-bottom: 5px !important;
   }
   
@@ -393,6 +392,7 @@ button:hover {
     text-align: center !important;
     align-items: center !important;
     justify-content: center !important;
+    margin-top: 10px;
     width: 125px !important;
     height: 35px !important;
     font-size: 14px !important;

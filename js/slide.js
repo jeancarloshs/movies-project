@@ -124,7 +124,7 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
                     <img class="img-destaque swiper-slide" src="https://image.tmdb.org/t/p/original/${bannerImage}" title=${tituloPtBr} alt="${tituloPtBr}">
                     <div class="detalhes-destaque">
                     <h1>${tituloPtBr}</h1>
-                    <button class="btnInfo" movie-title=${tituloPtBr} movie-id=${idFilme} movie-key=${videoKey} overview="${sinopsePtBr}">Assistir</button>
+                    <button class="btnInfo" movie-title="${tituloPtBr}" movie-id="${idFilme}" movie-key="${videoKey}" overview="${sinopsePtBr}">Assistir</button>
                     <button class="btnFavoritos">+</button>
                       <div class="info-detalhes">
                         <span class="spanInfo">${anoLancamento}</span>
