@@ -80,7 +80,7 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
       dataJson.slice(0, 3).forEach((element, index, array) => {
         let idFilme = element.id;
         let tituloPtBr = element.title;
-        let sinopsePtBr = element.overview
+        let sinopsePtBr = element.overview;
         let bannerImage = element.backdrop_path;
         let posterImage = element.poster_path;
         let dataDeLancamento = element.release_date;
@@ -100,6 +100,7 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
             }).then(response => response.json()).then(trailerVideo => {
               let dataVideo = trailerVideo["results"];
               dataVideo.slice(0, 1).forEach((element) => {
+                let videoKey = element.key
                 //console.log(element.key)
 
                 fetch(`https://api.themoviedb.org/3/movie/${idFilme}?api_key=${API_KEY}&language=pt-BR`, { 
@@ -122,7 +123,7 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
                     <img class="img-destaque swiper-slide" src="https://image.tmdb.org/t/p/original/${bannerImage}" title="${tituloPtBr}" alt="${tituloPtBr}">
                     <div class="detalhes-destaque">
                     <h1>${tituloPtBr}</h1>
-                    <button class="btnInfo" movie-id=${idFilme}><a href="https://www.youtube.com/watch?v=${element.key}" target="_blank">Assistir</a></button>
+                    <button class="btnInfo" movie-title=${tituloPtBr} movie-id=${idFilme} movie-key=${videoKey} overview="${sinopsePtBr}">Assistir</button>
                     <button class="btnFavoritos">+</button>
                       <div class="info-detalhes">
                         <span class="spanInfo">${anoLancamento}</span>
@@ -130,9 +131,57 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
                       </div>
                     </div>
                   </div>`
+                }) // dataTime
+
+                fetch(`https://api.themoviedb.org/3/movie/${idFilme}?api_key=${API_KEY}&language=pt-BR`, { 
+                  method: "GET",
+                  headers: headersList,
+                }).then(response => response.json()).then(modalFilme => {
+                  let btnInfo = document.querySelectorAll('.btnInfo')
+
+                  const closeModalButton = document.querySelector("#close-modal");
+                  const modal = document.querySelector("#modal");
+                  const fade = document.querySelector("#fade");
+
+                  btnInfo.forEach((element) => {
+                    const openModalButton = element;
+                    
+                    element.addEventListener('click', () => {
+                      let movieId = element.getAttribute('movie-id')
+                      let movieKey = element.getAttribute('movie-key')
+                      let movieTitle = element.getAttribute('movie-title')
+                      let movieOverview = element.getAttribute('overview')
+
+                      let detalhesDestaque = document.querySelector('body')
+                      detalhesDestaque.innerHTML += `
+                      <div id="fade" class="hide"></div>
+                      <div id="modal" class="hide">
+                        <div class="modal-header">
+                          <h2 class="modal-h2">Trailer ${movieTitle}</h2>
+                          <button id="close-modal">Fechar</button>
+                        </div>
+                        <div class="modal-body">
+                        <iframe class="trailerYoutube" width="100%" height="720" src="https://www.youtube.com/embed/${movieKey}" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <p>${movieOverview}</p>
+                      </div>`
+                      console.log(element)
+                    })
+                    openModalButton.addEventListener("click", () => toggleModal());
+                  })
+                  //console.log(`https://www.youtube.com/watch?v=${element.key}`)
+                }) // modalFilme
+                const toggleModal = () => {
+                  modal.classList.toggle("hide");
+                  fade.classList.toggle("hide");
+                };
+            
+                closeModalButton.addEventListener('click', () => {
+                  modal.classList.toggle("hide")
+                  fade.classList.toggle("hide")
                 })
-              })
-            })
-      });
+              }) // dataVideo
+            }) // trailerVideo
+      }) // dataJson forEach
 })
 ();
