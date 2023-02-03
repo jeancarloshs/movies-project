@@ -125,8 +125,6 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
                     <button class="btnInfo"><a href="https://www.youtube.com/watch?v=${element.key}" target="_blank">Assistir</a></button>
                     <button class="btnFavoritos">+</button>
                       <div class="info-detalhes">
-                        <img class="infoImg" src="./assets/images/destaque/12 1.png" alt="Indicação 12 Anos">
-                        <img class="infoImg" src="./assets/images/destaque/4K 1.png" alt="Resolução 4K">
                         <span class="spanInfo">${anoLancamento}</span>
                         <span class="spanInfo">/ ${converter(70)} min</span>
                       </div>
