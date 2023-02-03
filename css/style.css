@@ -341,55 +341,75 @@ button:hover {
 
 
 /* RESPONSIVO */
-/* @media (max-width: 600px)
+@media (max-width: 600px)
 {
-  .destaque-slider {
-    flex-wrap: wrap;
-    margin-bottom: 50px;
+  .swiper .swiper-slide {
+    margin: 20px 0;
+    height: auto !important;
   }
 
-  .img-destaque {
-    width: 340px;
-    height: auto;
+  .destaque-slider {
+    flex-wrap: wrap !important;
+    margin-bottom: 50px !important;
   }
   
   .destaque-slider > .img-destaque:nth-child(odd) {
-    width: 340px;
-    height: 192px;
-  } */
+    width: 340px !important;
+    height: 192px !important;
+  }
 
-  /* .detalhes-destaque {
-    position: absolute;
-    top: 240px;
-    margin-left: 25px;
-    color: var(--white-primary);
-  } */
+  .detalhes-destaque {
+    position: absolute !important;
+    top: 200px !important;
+    margin-left: 25px !important;
+    color: var(--white-primary) !important;
+  }
 
-  /* .detalhes-destaque > h1 {
-    font-size: 24px;
+  .detalhes-destaque > h1 {
+    font-size: 24px !important;
+    margin-bottom: 5px !important;
   }
   
   .detalhes-destaque > p {
-    font-size: 20px;
-    font-weight: 300;
-  }
-  
-  .info-detalhes > img {
-    margin-right: 10px;
+    font-size: 20px !important;
+    font-weight: 300 !important;
   }
   
   .info-detalhes > span {
-    font-size: 12px;
-    margin-right: 10px;
+    font-size: 12px !important;
+    margin-right: 10px !important;
   }
   
   .btnInfo {
-    width: 125px;
-    height: 35px;
-    font-size: 14px;
+    display: flex !important;
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 125px !important;
+    height: 35px !important;
+    font-size: 14px !important;
+    position: static !important;
   }
 
-  .separador {
-    margin-top: 120px;
+  .btnFavoritos {
+    display: flex !important;
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: absolute !important;
+    top: 30px !important;
+    left: 135px !important;
+    /* position: static !important;
+    float: right !important; */
   }
-} */
+
+  .swiper-slide > .detalhes-destaque > .info-detalhes > .spanInfo {
+    position: absolute !important;
+    top: 80px !important;
+    margin-right: 10px !important;
+  }
+
+  /* .separador {
+    margin-top: 120px !important;
+  } */
+}
