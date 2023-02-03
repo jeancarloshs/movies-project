@@ -115,7 +115,7 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
                     
                     return `${textoHoras }:${textoMinutos}`;
                   };                  
-                  console.log(converter(70));
+                  console.log(converter(60));
 
                   slideHeader.innerHTML += `
                   <div class="swiper-slide">
@@ -126,7 +126,7 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
                     <button class="btnFavoritos">+</button>
                       <div class="info-detalhes">
                         <span class="spanInfo">${anoLancamento}</span>
-                        <span class="spanInfo">/ ${converter(70)} min</span>
+                        <span class="spanInfo">/ ${converter(60)} min</span>
                       </div>
                     </div>
                   </div>`
