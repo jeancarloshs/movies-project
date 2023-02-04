@@ -291,7 +291,7 @@ button:hover {
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
-  color: black;
+  color: var(--white-primary);
 }
 
 .modal-header {
