@@ -134,7 +134,7 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
                     </div>
                   </div>`
                 }) // dataTime
-
+                
                 fetch(`https://api.themoviedb.org/3/movie/${idFilme}?api_key=${API_KEY}&language=pt-BR`, { 
                   method: "GET",
                   headers: headersList,
@@ -144,7 +144,7 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
                   const closeModalButton = document.querySelector("#close-modal");
                   const modal = document.querySelector("#modal");
                   const fade = document.querySelector("#fade");
-
+                  
                   btnInfo.forEach((element) => {
                     const openModalButton = element;
                     
@@ -153,38 +153,41 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
                       let movieKey = element.getAttribute('movie-key')
                       let movieTitle = element.getAttribute('movie-title')
                       let movieOverview = element.getAttribute('overview')
-
                       let detalhesDestaque = document.querySelector('body')
+                      let btnFechar = document.createElement("button")
+                      
                       detalhesDestaque.innerHTML += `
                       <div id="fade" class="hide"></div>
                       <div id="modal" class="hide">
                         <div class="modal-header">
                           <h2 class="modal-h2">Trailer ${movieTitle}</h2>
-                          <button id="close-modal">Fechar</button>
+                          ${btnFechar.innerHTML = `<button id="close-modal">Fechar</button>`}
                         </div>
                         <div class="modal-body">
                         <iframe class="trailerYoutube" width="100%" height="720" src="https://www.youtube.com/embed/${movieKey}" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                         <p>${movieOverview}</p>
                       </div>`
-                      console.log(element)
+                      //console.log(element)
+                      //console.log(btnFechar)
                     })
                     openModalButton.addEventListener("click", () => toggleModal());
                   })
                   //console.log(`https://www.youtube.com/watch?v=${element.key}`)
                 }) // modalFilme
-                const toggleModal = () => {
-                  modal.classList.toggle("hide");
-                  fade.classList.toggle("hide");
-                };
-            
-                closeModalButton.addEventListener('click', () => {
-                  modal.classList.toggle("hide")
-                  fade.classList.toggle("hide")
-                })
               }) // dataVideo
             }) // trailerVideo
       }) // dataJson forEach
+
+      const toggleModal = () => {
+        modal.classList.toggle("hide");
+        fade.classList.toggle("hide");
+      };
+
+      closeModalButton.addEventListener('click', () => {
+        modal.classList.toggle("hide")
+        fade.classList.toggle("hide")
+      })
 })
 ();
 
