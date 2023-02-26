@@ -144,6 +144,7 @@ svg:hover path{
 
 .swiper-slide > .detalhes-destaque > .btnInfo {
   position: absolute;
+  padding: 0 !important;
   width: 125px;
   height: 35px;
   border: 1px solid var(--green-primary);
@@ -159,6 +160,7 @@ svg:hover path{
 
 .swiper-slide > .detalhes-destaque > .btnFavoritos {
   position: absolute;
+  padding: 0 !important;
   width: 35px;
   height: 35px;
   border: 1px solid var(--green-primary);
@@ -272,7 +274,7 @@ button:hover {
   align-self: center; */
   justify-content: center;
   transform: translate(-50%, -50%);
-  width: 1280px;
+  width: 720px;
   max-width: 90%;
   background-color: var(--blue-secundary);
   padding: 1.2rem;
@@ -309,7 +311,7 @@ button:hover {
 
 #modal p {
   color: white;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 
@@ -324,9 +326,15 @@ button:hover {
   height: 720px;
 } */
 
+.trailerYoutube {
+  width: 100% !important;
+  height: 520px !important;
+}
 
-
-
+.sinopseTrailer {
+  color: white;
+  margin-top: 10px;
+}
 
 
 

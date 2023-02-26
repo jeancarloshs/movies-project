@@ -122,7 +122,7 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
 
                   slideHeader.innerHTML += `
                   <div class="swiper-slide">
-                    <img class="img-destaque swiper-slide" src="https://image.tmdb.org/t/p/original/${bannerImage}" title=${tituloPtBr} alt="${tituloPtBr}">
+                    <img class="img-destaque swiper-slide" src="https://image.tmdb.org/t/p/original/${bannerImage}" title="${tituloPtBr}" alt="${tituloPtBr}">
                     <div class="detalhes-destaque">
                     <h1>${tituloPtBr}</h1>
                     <button class="btnInfo" movie-title="${tituloPtBr}" movie-id="${idFilme}" movie-key="${videoKey}" overview="${sinopsePtBr}">Assistir</button>
@@ -161,11 +161,12 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
                       <div id="modal" class="hide">
                         <div class="modal-header">
                           <h2 class="modal-h2">Trailer ${movieTitle}</h2>
-                          ${btnFechar.innerHTML = `<button id="close-modal">Fechar</button>`}
+                          <button id="close-modal">Fechar</button>
                         </div>
                         <div class="modal-body">
                         <iframe class="trailerYoutube" width="100%" height="720" src="https://www.youtube.com/embed/${movieKey}" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
+                        <h3 class="sinopseTrailer">Sinopse:</h3>
                         <p>${movieOverview}</p>
                       </div>`
                       //console.log(element)
