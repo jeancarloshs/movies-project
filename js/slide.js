@@ -76,6 +76,231 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
    //console.log(data);
    //console.log(dataJson)
 
+  //  fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}&language=pt-BR`, {
+  //   method: "GET",
+  //   headers: headersList
+  // }).then(response => response.json()).then(generosFilmes => {
+  //   //console.log(generosFilmes)
+  //   let listaGeneros = generosFilmes.genres
+  //   let addGeneros = document.querySelector('.listaGeneros');
+  //   listaGeneros.forEach((element) => {
+  //     let idGenero = element.id;
+  //     let nomeGenero = element.name;
+  //     //console.log(idGenero, nomeGenero)
+  //     switch (idGenero) {
+  //       case 28:
+  //           nomeGenero = "Ação";
+  //           fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=pt-BR&with_genres=${idGenero}`, {
+  //             method: "GET",
+  //             headers: headersList
+  //           }).then(response => response.json()).then(generoAcao => {
+  //             let responseGeneroAcao = generoAcao.results;
+  //             addGeneros.innerHTML = `<h3 class="tituloGeneros">${nomeGenero}</h3>`
+  //             responseGeneroAcao.forEach((element) => {
+  //               let idFilme = element.id;
+  //               let tituloPtBr = element.title;
+  //               let sinopsePtBr = element.overview;
+  //               let bannerImage = element.backdrop_path;
+  //               let posterImage = element.poster_path;
+  //               let dataDeLancamento = element.release_date;
+  //               let tempoDeConteudo = element.runtime;
+  //               addGeneros.innerHTML += `
+  //               <swiper-container class="mySwiper slideGeneros" navigation="true" pagination="true" pagination-clickable="true" slides-per-view="4">
+  //               <swiper-slide>
+  //                 <img class="img-generos" src="https://image.tmdb.org/t/p/original/${posterImage}" title="${tituloPtBr}" alt="${tituloPtBr}">
+  //               </swiper-slide>
+  //               </swiper-container>
+  //             `
+  //             })
+  //             console.log(responseGeneroAcao)
+  //           })
+  //           break;
+  //       case 12:
+  //           nomeGenero = "Aventura";
+  //           fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=pt-BR&with_genres=${idGenero}`, {
+  //             method: "GET",
+  //             headers: headersList
+  //           }).then(response => response.json()).then(generoAventura => {
+  //             let responseGeneroAventura = generoAventura.results;
+  //             //console.log(responseGeneroAventura)
+  //           })
+  //           break;
+  //       case 16:
+  //           nomeGenero = "Animação";
+  //           fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=pt-BR&with_genres=${idGenero}`, {
+  //             method: "GET",
+  //             headers: headersList
+  //           }).then(response => response.json()).then(generoAnimacao => {
+  //             let responseGeneroAnimacao = generoAnimacao.results;
+  //             //console.log(responseGeneroAnimacao)
+  //           })
+  //           break;
+  //       case 35:
+  //           nomeGenero = "Comédia";
+  //           fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=pt-BR&with_genres=${idGenero}`, {
+  //             method: "GET",
+  //             headers: headersList
+  //           }).then(response => response.json()).then(generoComedia => {
+  //             let responseGeneroComedia = generoComedia.results;
+  //             //console.log(responseGeneroComedia)
+  //           })
+  //           break;
+  //       case 80:
+  //           nomeGenero = "Crime";
+  //           fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=pt-BR&with_genres=${idGenero}`, {
+  //             method: "GET",
+  //             headers: headersList
+  //           }).then(response => response.json()).then(generoCrime => {
+  //             let responseGeneroCrime = generoCrime.results;
+  //             //console.log(responseGeneroCrime)
+  //           })
+  //           break;
+  //       case 99:
+  //           nomeGenero = "Documentário";
+  //           fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=pt-BR&with_genres=${idGenero}`, {
+  //             method: "GET",
+  //             headers: headersList
+  //           }).then(response => response.json()).then(generoDocumentario => {
+  //             let responseGeneroDocumentario = generoDocumentario.results;
+  //             //console.log(responseGeneroDocumentario)
+  //           })
+  //           break;
+  //       case 18:
+  //           nomeGenero = "Drama";
+  //           fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=pt-BR&with_genres=${idGenero}`, {
+  //             method: "GET",
+  //             headers: headersList
+  //           }).then(response => response.json()).then(generoDrama => {
+  //             let responseGeneroDrama = generoDrama.results;
+  //             //console.log(responseGeneroDrama)
+  //           })
+  //           break;
+  //       case 10751:
+  //           nomeGenero = "Família";
+  //           fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=pt-BR&with_genres=${idGenero}`, {
+  //             method: "GET",
+  //             headers: headersList
+  //           }).then(response => response.json()).then(generoFamilia => {
+  //             let responseGeneroFamilia = generoFamilia.results;
+  //             //console.log(responseGeneroFamilia)
+  //           })
+  //           break;
+  //       case 14:
+  //           nomeGenero = "Fantasia";
+  //           fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=pt-BR&with_genres=${idGenero}`, {
+  //             method: "GET",
+  //             headers: headersList
+  //           }).then(response => response.json()).then(generoFantasia => {
+  //             let responseGeneroFantasia = generoFantasia.results;
+  //             //console.log(responseGeneroFantasia)
+  //           })
+  //           break;
+  //       case 36:
+  //           nomeGenero = "História";
+  //           fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=pt-BR&with_genres=${idGenero}`, {
+  //             method: "GET",
+  //             headers: headersList
+  //           }).then(response => response.json()).then(generoHistoria => {
+  //             let responseGeneroHistoria = generoHistoria.results;
+  //             //console.log(responseGeneroHistoria)
+  //           })
+  //           break;
+  //       case 27:
+  //           nomeGenero = "Terror";
+  //           fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=pt-BR&with_genres=${idGenero}`, {
+  //             method: "GET",
+  //             headers: headersList
+  //           }).then(response => response.json()).then(generoTerror => {
+  //             let responseGeneroTerror = generoTerror.results;
+  //             //console.log(responseGeneroTerror)
+  //           })
+  //           break;
+  //       case 10402:
+  //           nomeGenero = "Música";
+  //           fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=pt-BR&with_genres=${idGenero}`, {
+  //             method: "GET",
+  //             headers: headersList
+  //           }).then(response => response.json()).then(generoMusica => {
+  //             let responseGeneroMusica = generoMusica.results;
+  //             //console.log(responseGeneroMusica)
+  //           })
+  //           break;
+  //       case 9648:
+  //           nomeGenero = "Mistério";
+  //           fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=pt-BR&with_genres=${idGenero}`, {
+  //             method: "GET",
+  //             headers: headersList
+  //           }).then(response => response.json()).then(generoMisterio => {
+  //             let responseGeneroMisterio = generoMisterio.results;
+  //             //console.log(responseGeneroMisterio)
+  //           })
+  //           break;
+  //       case 10749:
+  //           nomeGenero = "Romance";
+  //           fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=pt-BR&with_genres=${idGenero}`, {
+  //             method: "GET",
+  //             headers: headersList
+  //           }).then(response => response.json()).then(generoRomance => {
+  //             let responseGeneroRomance = generoRomance.results;
+  //             //console.log(responseGeneroRomance)
+  //           })
+  //           break;
+  //       case 878:
+  //           nomeGenero = "Ficção científica";
+  //           fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=pt-BR&with_genres=${idGenero}`, {
+  //             method: "GET",
+  //             headers: headersList
+  //           }).then(response => response.json()).then(generoFiccaoCientifica => {
+  //             let responseGeneroFiccaoCientifica = generoFiccaoCientifica.results;
+  //             //console.log(responseGeneroFiccaoCientifica)
+  //           })
+  //           break;
+  //       case 10770:
+  //           nomeGenero = "Cinema TV";
+  //           fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=pt-BR&with_genres=${idGenero}`, {
+  //             method: "GET",
+  //             headers: headersList
+  //           }).then(response => response.json()).then(generoCinemaTV => {
+  //             let responseGeneroCinemaTV = generoCinemaTV.results;
+  //             //console.log(responseGeneroCinemaTV)
+  //           })
+  //           break;
+  //       case 53:
+  //           nomeGenero = "Thriller";
+  //           fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=pt-BR&with_genres=${idGenero}`, {
+  //             method: "GET",
+  //             headers: headersList
+  //           }).then(response => response.json()).then(generoThriller => {
+  //             let responseGeneroThriller = generoThriller.results;
+  //             //console.log(responseGeneroThriller)
+  //           })
+  //           break;
+  //       case 10752:
+  //           nomeGenero = "Guerra";
+  //           fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=pt-BR&with_genres=${idGenero}`, {
+  //             method: "GET",
+  //             headers: headersList
+  //           }).then(response => response.json()).then(generoGuerra => {
+  //             let responseGeneroGuerra = generoGuerra.results;
+  //             //console.log(responseGeneroGuerra)
+  //           })
+  //           break;
+  //       case 37:
+  //           nomeGenero = "Faroeste";
+  //           fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=pt-BR&with_genres=${idGenero}`, {
+  //             method: "GET",
+  //             headers: headersList
+  //           }).then(response => response.json()).then(generoFaroeste => {
+  //             let responseGeneroFaroeste = generoFaroeste.results;
+  //             //console.log(responseGeneroFaroeste)
+  //           })
+  //           break;
+  //       default:
+  //           nomeGenero = "Mês inexistente";
+  //   }
+  //   })
+  // });
+
    let slideHeader = document.querySelector('.swiper-wrapper')
 
    //.slice(-3) limita o forEach em somente 3 elementos
@@ -164,11 +389,42 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
                           <button id="close-modal">Fechar</button>
                         </div>
                         <div class="modal-body">
-                        <iframe class="trailerYoutube" width="100%" height="720" src="https://www.youtube.com/embed/${movieKey}" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                          <iframe class="trailerYoutube" width="100%" height="720" src="https://www.youtube.com/embed/${movieKey}" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
-                        <h3 class="sinopseTrailer">Sinopse:</h3>
-                        <p>${movieOverview}</p>
+                        <div>
+                          <h3 class="sinopseTrailer">Sinopse:</h3>
+                          <p>${movieOverview}</p>
+                        </div>
+                      <div class="separador"></div>
+                      <div class="filmesSimilares">
+                        <h3 class="sinopseTrailer">Similares:</h3>
+                      <swiper-container class="mySwiper" navigation="true" pagination="true" pagination-clickable="true" slides-per-view="4">
+                      </swiper-container>
+                      </div>
                       </div>`
+                      fetch(`https://api.themoviedb.org/3/movie/${movieId}/similar?api_key=${API_KEY}&language=pt-BR`, {
+                        method: "GET",
+                        headers: headersList
+                      }).then(response => response.json()).then(filmesSimilares => {
+                        let recomendadosSimilaresModal = document.querySelector(".mySwiper");
+                        let filmesSimilaresModal = filmesSimilares.results
+                        //console.log(recomendadosSimilaresModal)
+                        filmesSimilaresModal.forEach((element) => {
+                          //let idFilme = element.id;
+                          let tituloPtBr = element.title;
+                          // let sinopsePtBr = element.overview;
+                          let bannerImage = element.backdrop_path;
+                          let posterImage = element.poster_path;
+                          // let dataDeLancamento = element.release_date;
+                          // let tempoDeConteudo = element.runtime;
+                          // console.log(element)
+                          recomendadosSimilaresModal.innerHTML += `
+                          <swiper-slide>
+                            <img class="img-filmesSimilares" src="https://image.tmdb.org/t/p/original/${bannerImage}" title="${tituloPtBr}" alt="${tituloPtBr}">
+                          </swiper-slide>
+                          `
+                        })
+                      })
                       //console.log(element)
                       //console.log(btnFechar)
                     })
