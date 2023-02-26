@@ -296,7 +296,7 @@ const API_KEY = '35d85489e2e98217e6bb80e10bd639e3';
   //           })
   //           break;
   //       default:
-  //           nomeGenero = "Mês inexistente";
+  //           nomeGenero = "Genero inexistente";
   //   }
   //   })
   // });
